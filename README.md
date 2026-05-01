@@ -179,6 +179,44 @@ vless://UUID-HERE@vercel.com:443?encryption=none&security=tls&sni=vercel.com&fp=
 
 ---
 
+## 🪟 نصب خودکار ویندوز (One-Click)
+
+برای کسانی که نمی‌خوان دستی با `vercel` جلو برن، دو فایل جدید اضافه شده:
+
+- `Run-Deploy-Windows.bat`
+- `Deploy-Windows.ps1`
+
+روش استفاده:
+
+1. فایل ZIP رو Extract کن.
+2. `Run-Deploy-Windows.bat` رو اجرا کن.
+3. VPN رو روی TUN Mode فعال کن.
+4. مقدارهای لازم رو وارد کن.
+
+این installer به‌صورت خودکار انجام میده:
+
+- بررسی و نصب `npm` (در صورت نبودن)
+- بررسی و نصب `vercel` CLI (در صورت نبودن)
+- بررسی لاگین `vercel`
+- ساخت پروژه جدید (یا استفاده از پروژه لینک‌شده)
+- ست کردن ENVهای production
+- deploy نهایی و نمایش لینک `Aliased`
+
+قابلیت مدیریت بعد از لینک شدن پروژه:
+
+- `Redeploy current linked project`
+- `Update production env vars`
+- `List recent deployments`
+- `Deploy as NEW project`
+
+نکات:
+
+- برای توقف فوری در هر مرحله: `Ctrl + C`
+- بعد از اجرای هر گزینه، دوباره به منوی اصلی برمی‌گرده.
+- `RELAY_PATH` باید دقیقاً با path اینباند سرور خارج یکی باشه.
+
+---
+
 ## License
 
 MIT
